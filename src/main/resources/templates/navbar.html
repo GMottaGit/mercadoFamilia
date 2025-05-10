@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+    <div th:fragment="nav">
+        <header class="site-header">
+            <div class="logo-area">
+                <img th:src="@{/logo.jpg}" alt="Logo do Mercado" class="logo">
+                <div class="titulo-descricao">
+                    <h2>Mercado da Família</h2>
+                    <p>Seu mercado de confiança para o dia a dia</p>
+                </div>
+            </div>
+            <nav class="nav-menu">
+                <a th:href="@{/}">Início</a>
+                <a th:href="@{/cadastroProduto}">Cadastrar Produto</a>
+                <a th:href="@{/listaProduto}">Lista de Produtos</a>
+                <a th:href="@{/cadastroFuncionario}">Cadastrar Funcionário</a>
+                <a th:href="@{/listaFuncionario}">Lista de Funcionários</a>
+            </nav>
+            <hr>
+        </header>
+    </div>
+</body>
+</html>

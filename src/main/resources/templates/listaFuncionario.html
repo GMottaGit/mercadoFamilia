@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Funcionários</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+    <div th:replace="navbar.html :: nav"></div>
+
+    <main>
+        <h1>Mercado da Família</h1>
+        <h3>Lista de Funcionários:</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Cargo</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="funcionario : ${lista}">
+                    <td th:text="${funcionario.id}"></td>
+                    <td th:text="${funcionario.nome}"></td>
+                    <td th:text="${funcionario.cargo}"></td>
+                    <td th:text="${funcionario.email}"></td>
+                    <td>
+                        <a th:href="@{'/deletarFuncionario/' + ${funcionario.id}}">Excluir</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 Mercado da Família. Todos os direitos reservados.</p>
+        <p>Desenvolvido por GMottaGit</p>
+    </footer>
+</body>
+</html>

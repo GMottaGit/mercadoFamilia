@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Mercado da Família - Início</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+    <div th:replace="navbar.html :: nav"></div>
+
+    <main>
+        <h1>Bem-vindo ao Sistema de Gestão do Mercado da Família</h1>
+        <p>Este sistema tem como objetivo facilitar o gerenciamento de produtos e funcionários do mercado.</p>
+
+        <h2>Funcionalidades disponíveis:</h2>
+        <ul>
+            <li><strong>Cadastrar produtos:</strong> Adicione novos itens ao estoque do mercado.</li>
+            <li><strong>Atualizar estoque:</strong> Mantenha o controle das quantidades disponíveis.</li>
+            <li><strong>Consultar produtos:</strong> Veja a lista de todos os produtos cadastrados.</li>
+            <li><strong>Cadastrar funcionários:</strong> Registre os colaboradores que trabalham no mercado.</li>
+            <li><strong>Consultar funcionários:</strong> Acesse uma lista com os dados dos funcionários.</li>
+        </ul>
+
+        <p>Utilize o menu acima para navegar entre as funcionalidades do sistema.</p>
+    </main>
+</body>
+</html>
